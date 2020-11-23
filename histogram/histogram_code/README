@@ -1,0 +1,9 @@
+histogram.c 
+	compile: gcc histogram.c -lm -o histogram 
+	entrada: 
+		imagem ppm 
+
+	exemplo de execução: ./histogram < 4k-a.ppm 
+
+
+
