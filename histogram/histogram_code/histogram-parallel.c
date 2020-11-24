@@ -4,6 +4,10 @@
 
 #define RGB_COMPONENT_COLOR 255
 
+#include <omp.h>
+#define NUM_THREADS 2
+#include <likwid.h>
+
 typedef struct {
 	unsigned char red, green, blue;
 } PPMPixel;
@@ -82,15 +86,20 @@ void Histogram(PPMImage *image, float *h) {
 	int i, j,  k, l, x, count;
 	int rows, cols;
 
-	float n = image->y * image->x;
+	double n = image->y * image->x;
 
 	cols = image->x;
 	rows = image->y;
 
-	for (i = 0; i < n; i++) {
-		image->data[i].red = floor((image->data[i].red * 4) / 256);
-		image->data[i].blue = floor((image->data[i].blue * 4) / 256);
-		image->data[i].green = floor((image->data[i].green * 4) / 256);
+	#pragma omp parallel num_threads(NUM_THREADS)
+	{
+		#pragma omp for schedule(static) private(i)
+		for (i = 0; i < (int) n; i++)
+		{
+			image->data[i].red = floor((image->data[i].red * 4) / 256);
+			image->data[i].blue = floor((image->data[i].blue * 4) / 256);
+			image->data[i].green = floor((image->data[i].green * 4) / 256);
+		}		
 	}
 
 	count = 0;
@@ -98,9 +107,13 @@ void Histogram(PPMImage *image, float *h) {
 	for (j = 0; j <= 3; j++) {
 		for (k = 0; k <= 3; k++) {
 			for (l = 0; l <= 3; l++) {
-				for (i = 0; i < n; i++) {
-					if (image->data[i].red == j && image->data[i].green == k && image->data[i].blue == l) {
-						count++;
+				#pragma omp parallel num_threads(NUM_THREADS)
+				{
+					#pragma omp for schedule(static) private(i)
+					for (i = 0; i < (int) n; i++) {
+						if (image->data[i].red == j && image->data[i].green == k && image->data[i].blue == l) {
+							count++;
+						}
 					}
 				}
 				h[x] = count / n;
@@ -112,6 +125,10 @@ void Histogram(PPMImage *image, float *h) {
 }
 
 int main(int argc, char *argv[]) {
+	TimerData tempo;
+    const TimerData *tempo_ptr = &tempo;
+    timer_init();
+    timer_start( &tempo );
 
 	int i;
 
@@ -119,9 +136,13 @@ int main(int argc, char *argv[]) {
 
 	float *h = (float*)malloc(sizeof(float) * 64);
 
+	#pragma omp for schedule(static) private(i)
 	for(i=0; i < 64; i++) h[i] = 0.0;
 
 	Histogram(image, h);
+
+	timer_stop( &tempo );
+    printf("%lf\n",  timer_print( tempo_ptr ));
 
 	for (i = 0; i < 64; i++){
 		printf("%0.3f ", h[i]);

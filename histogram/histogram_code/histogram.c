@@ -4,6 +4,8 @@
 
 #define RGB_COMPONENT_COLOR 255
 
+#include <likwid.h>
+
 typedef struct {
 	unsigned char red, green, blue;
 } PPMPixel;
@@ -112,6 +114,10 @@ void Histogram(PPMImage *image, float *h) {
 }
 
 int main(int argc, char *argv[]) {
+	TimerData tempo;
+    const TimerData *tempo_ptr = &tempo;
+    timer_init();
+    timer_start( &tempo );
 
 	int i;
 
@@ -122,6 +128,9 @@ int main(int argc, char *argv[]) {
 	for(i=0; i < 64; i++) h[i] = 0.0;
 
 	Histogram(image, h);
+
+	timer_stop( &tempo );
+    printf("%lf\n",  timer_print( tempo_ptr ));
 
 	for (i = 0; i < 64; i++){
 		printf("%0.3f ", h[i]);

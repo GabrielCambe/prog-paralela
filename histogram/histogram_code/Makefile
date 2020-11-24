@@ -10,17 +10,21 @@ PROG = histogram
 .PHONY: clean purge
 
 serial:
-	gcc $(PROG).c -lm -o $(PROG)
+	@gcc $(PROG).c $(LIKWID_FLAGS) $(LIKWID_LIBS) -lm -o $(PROG)
 
 serial-test: serial
-	./$(PROG) < ../4k/4k-a.ppm > out.txt
+	@./$(PROG) < ../4k/4k-a.ppm > aux.txt
+	@cat aux.txt | sed -n '1 p'
+	@cat aux.txt | sed -n '2 p' > serial-out.txt
 
 parallel:
-	gcc -fopenmp $(PROG)-parallel.c -lm -o $(PROG)-parallel
+	@gcc -fopenmp $(PROG)-parallel.c $(LIKWID_FLAGS) $(LIKWID_LIBS) -lm -o $(PROG)-parallel
 
 parallel-test:
-	export OMP_NUM_THREADS=4
-	./$(PROG)-parallel < ../4k/4k-a.ppm > out.txt
+	@export OMP_NUM_THREADS=2
+	@./$(PROG)-parallel < ../4k/4k-a.ppm > aux.txt
+	@cat aux.txt | sed -n '1 p'
+	@cat aux.txt | sed -n '2 p' > parallel-out.txt
 
 # serial-likwid:
 # 	gcc $(PROG).c $(CFLAGS) $(LFLAGS) -o $(PROG)
