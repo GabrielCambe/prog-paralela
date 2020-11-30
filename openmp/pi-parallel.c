@@ -25,8 +25,9 @@ int main(){
         #pragma omp atomic
         pi += step * sum;
     }
-    timer_stop( &tempo );
-    printf("%lf\n",  timer_print( tempo_ptr ));
 
     printf("res: %.5lf\n", pi);
+
+    timer_stop( &tempo );
+    printf("%lf\n",  timer_print( tempo_ptr ));
 }
