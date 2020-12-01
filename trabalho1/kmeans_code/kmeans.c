@@ -90,8 +90,8 @@ int main(void) {
 
 	timer_stop( &tempo );
     printf("%lf\n",  serial_time + timer_print( tempo_ptr ));
-	timer_stop( &total );
-    printf("%lf\n", timer_print( total_ptr ));
+    // timer_stop( &total );
+    //	    printf("%lf\n", timer_print( total_ptr ));
 
 	return(0);
 }

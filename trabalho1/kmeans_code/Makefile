@@ -2,7 +2,7 @@ LIKWID = /usr/local
 LIKWID_FLAGS = -I$(LIKWID)/bin/ -I$(LIKWID)/sbin -DLIKWID_PERFMON -I$(LIKWID)/include/
 LIKWID_LIBS = -L$(LIKWID)/lib/ -llikwid
 
-LFLAGS = -Wall -Werror -Wextra -Wno-unused-result -O3 
+LFLAGS = -Wall -Werror -Wextra -Wno-unused-variable -Wno-unused-result -O3 
 
 PROG = kmeans
 
