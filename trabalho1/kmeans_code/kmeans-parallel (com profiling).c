@@ -3,15 +3,15 @@
 #include <math.h>
 #define DIM 3
 
-//#include <likwid.h>
+#include <likwid.h>
 #include <omp.h>
-#define NUM_THREADS 2
+#define NUM_THREADS 4
 
 int main(void) {
-	//TimerData tempo;
-    	//const TimerData *tempo_ptr = &tempo;
-    	//timer_init();
-    	//timer_start( &tempo );
+	TimerData tempo;
+    const TimerData *tempo_ptr = &tempo;
+    timer_init();
+    timer_start( &tempo );
 
 	int i, j, k, n, c;
 	double dmin, dx;
@@ -90,8 +90,8 @@ int main(void) {
 	}
 	#endif
 
-	//timer_stop( &tempo );
-    	//printf("%lf\n",  timer_print( tempo_ptr ));
+	timer_stop( &tempo );
+    printf("%lf\n",  timer_print( tempo_ptr ));
 
 	return(0);
 }
