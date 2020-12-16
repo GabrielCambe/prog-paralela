@@ -1,0 +1,4 @@
+{'mean_serial_time:': 2.7319605000000005}
+{'std_serial_time:': 0.009509534712592325}
+{'mean_total_time:': 21.37688445}
+{'std_total_time:': 0.23130699720273865}

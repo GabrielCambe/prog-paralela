@@ -4,8 +4,7 @@ from random import uniform as uni
 k = int(sys.argv[1])
 n = int(sys.argv[2])
 
-print k
-print n
+print(k)
+print(n)
 for i in range(k+n):
-	print "%f %f %f" %(uni(-100,100), uni(-100,100), uni(-100,100))
-
+	print("%f %f %f" % (uni(-100,100), uni(-100,100), uni(-100,100)))

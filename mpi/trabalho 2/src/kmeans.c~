@@ -2,18 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #define DIM 3
-
-#include <likwid.h>
-
 int main(void) {
-	TimerData tempo, total;
-    const TimerData *tempo_ptr = &tempo;
-	const TimerData *total_ptr = &total;
-	double serial_time = 0.0; 
-    timer_init();
-	timer_start( &total );
-    timer_start( &tempo );
-
 	int i, j, k, n, c;
 	double dmin, dx;
 	double *x, *mean, *sum;
@@ -40,11 +29,6 @@ int main(void) {
 			for (i = 0; i < DIM; i++)
 				sum[j*DIM+i] = 0.0;
 		}
-
-		timer_stop( &tempo );
-		serial_time += timer_print( tempo_ptr );
-		timer_reset( &tempo );
-
 		for (i = 0; i < n; i++) {
 			dmin = -1; color = cluster[i];
 			for (c = 0; c < k; c++) {
@@ -61,8 +45,6 @@ int main(void) {
 				cluster[i] = color;
 	      	}
 		}
-
-		timer_start( &tempo );
 
 	    for (i = 0; i < n; i++) {
 			count[cluster[i]]++;
@@ -87,11 +69,5 @@ int main(void) {
 		printf("%d\n", cluster[i]);
 	}
 	#endif
-
-	timer_stop( &tempo );
-    printf("%lf\n",  serial_time + timer_print( tempo_ptr ));
-    // timer_stop( &total );
-    //	    printf("%lf\n", timer_print( total_ptr ));
-
 	return(0);
 }

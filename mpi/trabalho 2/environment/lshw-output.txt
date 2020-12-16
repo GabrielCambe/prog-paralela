@@ -1,0 +1,430 @@
+clii3o
+    descrição: Notebook
+    produto: 82DJ (LENOVO_MT_82DJ_BU_idea_FM_IdeaPad S145-15IIL)
+    fabricante: LENOVO
+    versão: Lenovo IdeaPad S145-15IIL
+    serial: PE062T6R
+    largura: 64 bits
+    capacidades: smbios-3.2.0 dmi-3.2.0 smp vsyscall32
+    configuração: administrator_password=disabled boot=normal chassis=notebook family=IdeaPad S145-15IIL frontpanel_password=disabled keyboard_password=disabled power-on_password=disabled sku=LENOVO_MT_82DJ_BU_idea_FM_IdeaPad S145-15IIL uuid=4C4778D1-63C8-EA11-B59B-641C67BACC61
+  *-core
+       descrição: Placa-mãe
+       produto: LNVNB161216
+       fabricante: LENOVO
+       ID físico: 0
+       versão: SDK0J40679 WIN
+       serial: PE062T6R
+       slot: Type2 - Board Chassis Location
+     *-firmware
+          descrição: BIOS
+          fabricante: LENOVO
+          ID físico: 0
+          versão: DKCN29WW
+          date: 05/08/2020
+          tamanho: 128KiB
+          capacidade: 10MiB
+          capacidades: pci upgrade shadowing cdboot bootselect edd int13floppynec int13floppytoshiba int13floppy360 int13floppy1200 int13floppy720 int13floppy2880 int9keyboard int10video acpi usb biosbootspecification uefi
+     *-cpu
+          descrição: CPU
+          produto: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+          fabricante: Intel Corp.
+          ID físico: 4
+          informações do barramento: cpu@0
+          versão: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+          serial: To Be Filled By O.E.M.
+          slot: U3E1
+          tamanho: 3165MHz
+          capacidade: 4005MHz
+          largura: 64 bits
+          clock: 100MHz
+          capacidades: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid md_clear flush_l1d arch_capabilities cpufreq
+          configuração: cores=4 enabledcores=4 threads=8
+        *-cache:0
+             descrição: L1 cache
+             ID físico: 6
+             slot: L1 Cache
+             tamanho: 128KiB
+             capacidade: 128KiB
+             capacidades: synchronous internal write-back instruction
+             configuração: level=1
+        *-cache:1
+             descrição: L2 cache
+             ID físico: 7
+             slot: L2 Cache
+             tamanho: 2MiB
+             capacidade: 2MiB
+             capacidades: synchronous internal write-back unified
+             configuração: level=2
+        *-cache:2
+             descrição: L3 cache
+             ID físico: 8
+             slot: L3 Cache
+             tamanho: 6MiB
+             capacidade: 6MiB
+             capacidades: synchronous internal write-back unified
+             configuração: level=3
+     *-cache
+          descrição: L1 cache
+          ID físico: 5
+          slot: L1 Cache
+          tamanho: 192KiB
+          capacidade: 192KiB
+          capacidades: synchronous internal write-back data
+          configuração: level=1
+     *-memory
+          descrição: Memória do sistema
+          ID físico: 26
+          slot: Placa do sistema ou placa-mãe
+          tamanho: 12GiB
+        *-bank:0
+             descrição: SODIMM DDR4 Síncrono 2667 MHz (0,4 ns)
+             produto: CT8G4SFRA266.C4FE
+             fabricante: 859B
+             ID físico: 0
+             serial: E3735737
+             slot: ChannelA-DIMM0
+             tamanho: 8GiB
+             largura: 64 bits
+             clock: 2667MHz (0.4ns)
+        *-bank:1
+             descrição: Linha de chips DDR4 Síncrono 2667 MHz (0,4 ns)
+             produto: SMS4TDC3C0K0446SCG
+             fabricante: Smart Brazil
+             ID físico: 1
+             serial: 00000000
+             slot: ChannelB-DIMM0
+             tamanho: 4GiB
+             largura: 64 bits
+             clock: 2667MHz (0.4ns)
+     *-pci
+          descrição: Host bridge
+          produto: Intel Corporation
+          fabricante: Intel Corporation
+          ID físico: 100
+          informações do barramento: pci@0000:00:00.0
+          versão: 03
+          largura: 32 bits
+          clock: 33MHz
+          configuração: driver=icl_uncore
+          recursos: irq:0
+        *-display
+             descrição: VGA compatible controller
+             produto: Intel Corporation
+             fabricante: Intel Corporation
+             ID físico: 2
+             informações do barramento: pci@0000:00:02.0
+             versão: 07
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: pciexpress msi pm vga_controller bus_master cap_list rom
+             configuração: driver=i915 latency=0
+             recursos: irq:127 memória:94000000-94ffffff memória:80000000-8fffffff porta de E/S:5000(tamanho=64) memória:c0000-dffff
+        *-generic
+             descrição: Signal processing controller
+             produto: Intel Corporation
+             fabricante: Intel Corporation
+             ID físico: 4
+             informações do barramento: pci@0000:00:04.0
+             versão: 03
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: msi pm bus_master cap_list
+             configuração: driver=proc_thermal latency=0
+             recursos: irq:16 memória:95100000-9510ffff
+        *-usb
+             descrição: USB controller
+             produto: Ice Lake-LP USB 3.1 xHCI Host Controller
+             fabricante: Intel Corporation
+             ID físico: 14
+             informações do barramento: pci@0000:00:14.0
+             versão: 30
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: pm msi xhci bus_master cap_list
+             configuração: driver=xhci_hcd latency=0
+             recursos: irq:124 memória:95110000-9511ffff
+           *-usbhost:0
+                produto: xHCI Host Controller
+                fabricante: Linux 5.4.0-58-generic xhci-hcd
+                ID físico: 0
+                informações do barramento: usb@1
+                nome lógico: usb1
+                versão: 5.04
+                capacidades: usb-2.00
+                configuração: driver=hub slots=12 speed=480Mbit/s
+              *-usb:0
+                   descrição: Vídeo
+                   produto: Integrated Camera
+                   fabricante: Sonix Technology Co., Ltd.
+                   ID físico: 5
+                   informações do barramento: usb@1:5
+                   versão: 0.28
+                   capacidades: usb-2.00
+                   configuração: driver=uvcvideo maxpower=500mA speed=480Mbit/s
+              *-usb:1
+                   descrição: Interface sem fio bluetooth
+                   fabricante: Intel Corp.
+                   ID físico: a
+                   informações do barramento: usb@1:a
+                   versão: 0.02
+                   capacidades: bluetooth usb-2.00
+                   configuração: driver=btusb maxpower=100mA speed=12Mbit/s
+           *-usbhost:1
+                produto: xHCI Host Controller
+                fabricante: Linux 5.4.0-58-generic xhci-hcd
+                ID físico: 1
+                informações do barramento: usb@2
+                nome lógico: usb2
+                versão: 5.04
+                capacidades: usb-3.10
+                configuração: driver=hub slots=6 speed=10000Mbit/s
+        *-memory DISPONÍVEL
+             descrição: RAM memory
+             produto: Intel Corporation
+             fabricante: Intel Corporation
+             ID físico: 14.2
+             informações do barramento: pci@0000:00:14.2
+             versão: 30
+             largura: 64 bits
+             clock: 33MHz (30.3ns)
+             capacidades: pm bus_master cap_list
+             configuração: latency=0
+             recursos: memória:95128000-95129fff memória:9512c000-9512cfff
+        *-network
+             descrição: Interface sem fio
+             produto: Killer Wi-Fi 6 AX1650i 160MHz Wireless Network Adapter (201NGW)
+             fabricante: Intel Corporation
+             ID físico: 14.3
+             informações do barramento: pci@0000:00:14.3
+             nome lógico: wlp0s20f3
+             versão: 30
+             serial: 8c:c6:81:d7:93:67
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: pm msi pciexpress msix bus_master cap_list ethernet physical wireless
+             configuração: broadcast=yes driver=iwlwifi driverversion=5.4.0-58-generic firmware=48.4fa0041f.0 ip=192.168.0.15 latency=0 link=yes multicast=yes wireless=IEEE 802.11
+             recursos: irq:16 memória:95120000-95123fff
+        *-serial:0
+             descrição: Serial bus controller
+             produto: Ice Lake-LP Serial IO I2C Controller #0
+             fabricante: Intel Corporation
+             ID físico: 15
+             informações do barramento: pci@0000:00:15.0
+             versão: 30
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: pm bus_master cap_list
+             configuração: driver=intel-lpss latency=0
+             recursos: irq:16 memória:390000000-390000fff
+        *-serial:1
+             descrição: Serial bus controller
+             produto: Ice Lake-LP Serial IO I2C Controller #1
+             fabricante: Intel Corporation
+             ID físico: 15.1
+             informações do barramento: pci@0000:00:15.1
+             versão: 30
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: pm bus_master cap_list
+             configuração: driver=intel-lpss latency=0
+             recursos: irq:17 memória:390001000-390001fff
+        *-communication
+             descrição: Communication controller
+             produto: Management Engine Interface
+             fabricante: Intel Corporation
+             ID físico: 16
+             informações do barramento: pci@0000:00:16.0
+             versão: 30
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: pm msi bus_master cap_list
+             configuração: driver=mei_me latency=0
+             recursos: irq:136 memória:9512f000-9512ffff
+        *-sata
+             descrição: SATA controller
+             produto: Ice Lake-LP SATA Controller [AHCI mode]
+             fabricante: Intel Corporation
+             ID físico: 17
+             informações do barramento: pci@0000:00:17.0
+             nome lógico: scsi0
+             versão: 30
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: sata msi pm ahci_1.0 bus_master cap_list emulated
+             configuração: driver=ahci latency=0
+             recursos: irq:125 memória:9512a000-9512bfff memória:95133000-951330ff porta de E/S:5080(tamanho=8) porta de E/S:5088(tamanho=4) porta de E/S:5060(tamanho=32) memória:95132000-951327ff
+           *-disk
+                descrição: ATA Disk
+                produto: KINGSTON SA400S3
+                ID físico: 0.0.0
+                informações do barramento: scsi@0:0.0.0
+                nome lógico: /dev/sda
+                versão: 1103
+                serial: 50026B778367DEF3
+                tamanho: 111GiB (120GB)
+                capacidades: partitioned partitioned:dos
+                configuração: ansiversion=5 logicalsectorsize=512 sectorsize=512 signature=5316f48a
+              *-volume:0 DISPONÍVEL
+                   descrição: Windows FAT volume
+                   fabricante: MSWIN4.1
+                   ID físico: 1
+                   informações do barramento: scsi@0:0.0.0,1
+                   versão: FAT32
+                   serial: 6ca3-5521
+                   tamanho: 510MiB
+                   capacidade: 512MiB
+                   capacidades: primary bootable fat initialized
+                   configuração: FATs=2 filesystem=fat
+              *-volume:1
+                   descrição: Extended partition
+                   ID físico: 2
+                   informações do barramento: scsi@0:0.0.0,2
+                   nome lógico: /dev/sda2
+                   tamanho: 111GiB
+                   capacidade: 111GiB
+                   capacidades: primary extended partitioned partitioned:extended
+                 *-logicalvolume
+                      descrição: volume EXT4
+                      fabricante: Linux
+                      ID físico: 5
+                      nome lógico: /dev/sda5
+                      nome lógico: /
+                      versão: 1.0
+                      serial: b18c53cb-deb4-429f-bbc8-18c16464337e
+                      tamanho: 111GiB
+                      capacidade: 111GiB
+                      capacidades: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                      configuração: created=2020-09-22 17:00:46 filesystem=ext4 lastmountpoint=/ modified=2020-12-14 01:00:19 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro mounted=2020-12-14 01:00:19 state=mounted
+        *-pci:0
+             descrição: PCI bridge
+             produto: Ice Lake-LP PCI Express Root Port #9
+             fabricante: Intel Corporation
+             ID físico: 1d
+             informações do barramento: pci@0000:00:1d.0
+             versão: 30
+             largura: 32 bits
+             clock: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuração: driver=pcieport
+             recursos: irq:122 porta de E/S:4000(tamanho=4096) memória:93000000-93ffffff porta de E/S:90000000(tamanho=16777216)
+        *-pci:1
+             descrição: PCI bridge
+             produto: Intel Corporation
+             fabricante: Intel Corporation
+             ID físico: 1d.4
+             informações do barramento: pci@0000:00:1d.4
+             versão: 30
+             largura: 32 bits
+             clock: 33MHz
+             capacidades: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuração: driver=pcieport
+             recursos: irq:123 porta de E/S:3000(tamanho=4096) memória:92000000-92ffffff porta de E/S:91000000(tamanho=16777216)
+           *-storage
+                descrição: Non-Volatile memory controller
+                produto: Intel Corporation
+                fabricante: Intel Corporation
+                ID físico: 0
+                informações do barramento: pci@0000:06:00.0
+                versão: 00
+                largura: 64 bits
+                clock: 33MHz
+                capacidades: storage pm msix pciexpress msi nvm_express bus_master cap_list
+                configuração: driver=nvme latency=0
+                recursos: irq:16 memória:92000000-92003fff
+        *-isa
+             descrição: ISA bridge
+             produto: Ice Lake-LP LPC Controller
+             fabricante: Intel Corporation
+             ID físico: 1f
+             informações do barramento: pci@0000:00:1f.0
+             versão: 30
+             largura: 32 bits
+             clock: 33MHz
+             capacidades: isa bus_master
+             configuração: latency=0
+        *-multimedia
+             descrição: Audio device
+             produto: Smart Sound Technology Audio Controller
+             fabricante: Intel Corporation
+             ID físico: 1f.3
+             informações do barramento: pci@0000:00:1f.3
+             versão: 30
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: pm msi bus_master cap_list
+             configuração: driver=snd_hda_intel latency=32
+             recursos: irq:147 memória:95124000-95127fff memória:95000000-950fffff
+        *-serial:2
+             descrição: SMBus
+             produto: Ice Lake-LP SMBus Controller
+             fabricante: Intel Corporation
+             ID físico: 1f.4
+             informações do barramento: pci@0000:00:1f.4
+             versão: 30
+             largura: 64 bits
+             clock: 33MHz
+             configuração: driver=i801_smbus latency=0
+             recursos: irq:16 memória:95130000-951300ff porta de E/S:5040(tamanho=32)
+        *-serial:3 DISPONÍVEL
+             descrição: Serial bus controller
+             produto: Ice Lake-LP SPI Controller
+             fabricante: Intel Corporation
+             ID físico: 1f.5
+             informações do barramento: pci@0000:00:1f.5
+             versão: 30
+             largura: 32 bits
+             clock: 33MHz
+             capacidades: bus_master
+             configuração: latency=0
+             recursos: memória:fe010000-fe010fff
+     *-pnp00:00
+          produto: PnP device PNP0c02
+          ID físico: 1
+          capacidades: pnp
+          configuração: driver=system
+     *-pnp00:01
+          produto: PnP device INT3f0d
+          fabricante: Interphase Corporation
+          ID físico: 2
+          capacidades: pnp
+          configuração: driver=system
+     *-pnp00:02
+          produto: PnP device PNP0303
+          ID físico: 3
+          capacidades: pnp
+     *-pnp00:03
+          produto: PnP device PNP0c02
+          ID físico: 6
+          capacidades: pnp
+          configuração: driver=system
+     *-pnp00:04
+          produto: PnP device PNP0c02
+          ID físico: 7
+          capacidades: pnp
+          configuração: driver=system
+     *-pnp00:05
+          produto: PnP device PNP0c02
+          ID físico: 8
+          capacidades: pnp
+          configuração: driver=system
+     *-pnp00:06
+          produto: PnP device PNP0c02
+          ID físico: 9
+          capacidades: pnp
+          configuração: driver=system
+  *-battery
+       descrição: Zinco-ar Battery
+       produto: CRB Battery 0
+       fabricante: -Virtual Battery 0-
+       ID físico: 1
+       versão: 08/08/2010
+       serial: Battery 0
+       slot: Fake
+  *-power DISPONÍVEL
+       descrição: OEM Define 1
+       produto: OEM Define 5
+       fabricante: OEM Define 2
+       ID físico: 2
+       versão: OEM Define 6
+       serial: OEM Define 3
+       capacidade: 75mWh
