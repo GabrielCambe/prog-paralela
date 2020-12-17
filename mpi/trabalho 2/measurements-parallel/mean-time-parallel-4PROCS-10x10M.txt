@@ -1,0 +1,2 @@
+{'mean_parallel_time:': 28.7633109}
+{'std_parallel_time:': 0.707482142391163}

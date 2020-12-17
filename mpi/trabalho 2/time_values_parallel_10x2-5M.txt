@@ -1,0 +1,2 @@
+parallel_time: 11.884
+parallel_time: 11.507225
