@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
 	timer_start(&tempo);
 
 	int rank, n_procs;
-	MPI_Status status;
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	MPI_Comm_size(MPI_COMM_WORLD, &n_procs);
@@ -64,9 +63,9 @@ int main(int argc, char *argv[])
 
 		// parte que eu decidi paralelizar
 		MPI_Bcast(mean, DIM * input_param[K], MPI_DOUBLE, 0, MPI_COMM_WORLD);
-		MPI_Scatter(x, (DIM * input_param[N]) / n_procs, MPI_DOUBLE, x, (DIM * input_param[N]) / n_procs, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+		MPI_Scatter(x, DIM * input_param[N] / n_procs, MPI_DOUBLE, x, (DIM * input_param[N]) / n_procs, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 		MPI_Scatter(cluster, input_param[N] / n_procs, MPI_INT, cluster, input_param[N] / n_procs, MPI_INT, 0, MPI_COMM_WORLD);
-		for (i = 0; i < input_param[N] / n_procs; i++)
+		for (i = 0; i < (input_param[N] / n_procs); i++)
 		{
 			dmin = -1;
 			color = cluster[i];
@@ -108,7 +107,7 @@ int main(int argc, char *argv[])
 				}
 			}
 		}
-		MPI_Barrier(MPI_COMM_WORLD);
+		// MPI_Barrier(MPI_COMM_WORLD);
 	}
 
 	if (rank == 0)
@@ -130,10 +129,9 @@ int main(int argc, char *argv[])
 	}
 #endif
 
-	MPI_Finalize();
-
 	timer_stop(&tempo);
 	printf("parallel_time: %lf\n", timer_print(tempo_ptr));
 
+	MPI_Finalize();
 	return (0);
 }

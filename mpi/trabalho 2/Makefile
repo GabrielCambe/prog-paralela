@@ -5,14 +5,11 @@ LIKWID_LIBS = -L$(LIKWID)/lib/ -llikwid
 PROG = kmeans
 CFLAGS = -Wall -Werror -Wextra -Wno-unused-variable -Wno-unused-result -O3 
 HOSTFILE = hosts
-# NUM_PROCS = 8
-
-# INPUT = 10x1M.txt # P CMD LINE
 
 .PHONY: clean purge
 
 serial:
-	@gcc $(PROG).c $(LIKWID_FLAGS) $(LIKWID_LIBS) $(LFLAGS) -o $(PROG)
+	@gcc $(PROG).c $(LIKWID_FLAGS) $(LIKWID_LIBS) $(CFLAGS) -o $(PROG)
 
 serial-test: serial
 	@./$(PROG) < $(INPUT)

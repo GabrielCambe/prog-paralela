@@ -1,0 +1,7 @@
+#!/bin/bash
+for i in $(seq 1 $2):
+do
+    echo "rodada $i" 1>&2
+    output=$(make INPUT=$1 serial-test)
+    echo "$output" | tail -n 2
+done

@@ -1,0 +1,26 @@
+System:    Kernel: 5.4.0-58-generic x86_64 bits: 64 compiler: gcc v: 9.3.0 Desktop: Cinnamon 4.6.7 
+           Distro: Linux Mint 20 Ulyana base: Ubuntu 20.04 focal 
+Machine:   Type: Laptop System: LENOVO product: 82DJ v: Lenovo IdeaPad S145-15IIL serial: <filter> 
+           Mobo: LENOVO model: LNVNB161216 v: SDK0J40679 WIN serial: <filter> UEFI [Legacy]: LENOVO v: DKCN29WW 
+           date: 05/08/2020 
+Battery:   ID-1: BAT0 charge: 29.4 Wh condition: 29.4/30.0 Wh (98%) model: LGC L16L2PB2 status: Full 
+CPU:       Topology: Quad Core model: Intel Core i5-1035G1 bits: 64 type: MT MCP arch: Ice Lake rev: 5 L2 cache: 6144 KiB 
+           flags: avx avx2 lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx bogomips: 19046 
+           Speed: 3493 MHz min/max: 400/3600 MHz Core speeds (MHz): 1: 3500 2: 3599 3: 3600 4: 3592 5: 3500 6: 3598 7: 3592 
+           8: 3600 
+Graphics:  Device-1: Intel vendor: Lenovo driver: i915 v: kernel bus ID: 00:02.0 
+           Display: x11 server: X.Org 1.20.8 driver: modesetting unloaded: fbdev,vesa resolution: 1366x768~60Hz 
+           OpenGL: renderer: llvmpipe (LLVM 10.0.0 256 bits) v: 3.3 Mesa 20.0.8 direct render: Yes 
+Audio:     Device-1: Intel Smart Sound Audio vendor: Lenovo driver: snd_hda_intel v: kernel bus ID: 00:1f.3 
+           Sound Server: ALSA v: k5.4.0-58-generic 
+Network:   Device-1: Intel Killer Wi-Fi 6 AX1650i 160MHz Wireless Network Adapter driver: iwlwifi v: kernel port: 5000 
+           bus ID: 00:14.3 
+           IF: wlp0s20f3 state: down mac: <filter> 
+Drives:    Local Storage: total: 125.20 GiB used: 29.48 GiB (23.5%) 
+           ID-1: /dev/nvme0n1 vendor: Intel model: MEMPEK1J016GAL size: 13.41 GiB 
+           ID-2: /dev/sda vendor: Kingston model: SA400S37120G size: 111.79 GiB temp: 21 C 
+Partition: ID-1: / size: 108.38 GiB used: 29.48 GiB (27.2%) fs: ext4 dev: /dev/sda5 
+Sensors:   System Temperatures: cpu: 60.0 C mobo: N/A 
+           Fan Speeds (RPM): N/A 
+Info:      Processes: 228 Uptime: 12m Memory: 11.50 GiB used: 869.1 MiB (7.4%) Init: systemd runlevel: 5 Compilers: gcc: 9.3.0 
+           Shell: bash v: 5.0.17 inxi: 3.0.38 

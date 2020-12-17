@@ -1,0 +1,4 @@
+{'mean_serial_time:': 2.798383}
+{'std_serial_time:': 0.0}
+{'mean_total_time:': 21.622711}
+{'std_total_time:': 0.0}
